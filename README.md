@@ -60,11 +60,11 @@ We fit many different models to our data in order to find the most effective sol
 
 > *Figure 3*
 
-All models performed exceedingly well in regards to recall, but where the convolutional neural network shines is in it's overall accuracy. This is important in reducing those false positives, and thus it is the model we chose to pursue for this problem. 
+All models performed exceedingly well in regards to recall, but where the convolutional neural network shines is in its overall accuracy. This is important in reducing those false positives, and thus it is the model we chose to pursue for this problem. 
 
 ## **Final Model**
 
-*Figure 4* shows the confusion matrix for our final XGBoost model's performance on our test data set:
+Our final model architecture consisted of an Xception model pretrained on the ImageNet dataset, with custom pooling and output layers specific to our binary classification problem. *Figure 4* shows the confusion matrix for this model's performance on our test data set:
 
 ![](./images//media/image5.png)
 
@@ -72,20 +72,20 @@ All models performed exceedingly well in regards to recall, but where the convol
 
 ### **Final Recall Score**
 
-As you can see, our model only misclassified 1 single person as having no serious injury. This is a recall of 99.9%, meaning a device using this model would be able to automatically dispatch an ambulance for almost everyone who needs one. 
+Out of XXXX children in the test set with pneumonia, our model was able to recognize XXXX of them, for a recall score of 99%. This means our model is able to flag almost every child who truly has pneumonia for a follow up with a medical professional. 
 
-### **Final FPR**
+### **Final Accuracy**
 
-Out of 115,558 people in the test set who were not seriously injured in their accidents, our model misclassified 21.5%. This means around 1 in 5 people who's injuries are not incapacitating will be flagged for potential EMS response. However, we believe this is an acceptable number and our proposed solution in the recommendation section addresses this concern directly. 
+Out of XXXX children in the test set total, our model correctly classified XXXX. This is important for reducing our false positives and ensuring that valuable medical resources are budgeted correctly for those who need it. 
 
 
 ## **Conclusions & Recommendations**
 
-We find that XGBoost provides the optimal balance between recall and false positive rate. This model also proves that the proposed device would indeed have the neccessary predictive power to warrant it's use in our client's new vehicle line. We recommend moving into the prototyping phase with the added caveat of a secondary alert feature to address any potential false positives. This would likely be a notification that appears on the vehicle's display after detecting an accident which asks if any occupants are seriously injured. To decline an automatic EMS response a customer can simply press the cancel button, but if no response is recieved in a certain predetermined time, an ambulance will be dispatched immediately. With these recommendations, we believe that our client will be able to fully satisfy their original business problem of increasing the safety rating of their new line of vehicles.
+We find that our convolutional neural network provides the optimal predictive power for this business problem. We believbe this model will indeed help humanitarian aid workers use their valuable medical resources more efficiently. Doctors can be deployed where they are most needed, and the children in need of aid can be identified more quickly. We recommend this system not as a replacement for a medical professional's opinion, but as a supplement to these resources and a technique to help filter through what may currently be simply too much data. 
 
-[Full Jupyter Notebook](https://github.com/ClayHunn/Phase3Project/blob/main/Final.ipynb)  
+[Full Jupyter Notebook]https://github.com/hall-nicholas/flatiron-ds-project-4/blob/main/code/Draft_final.ipynb)  
 
 [Non Technical Presentation](https://github.com/ClayHunn/Phase3Project/blob/main/NonTechnicalPresentation.pdf)  
 
-[Original Dataset](https://data.cityofchicago.org/Transportation/Traffic-Crashes-Crashes/85ca-t3if)
+[Original Dataset](https://data.mendeley.com/datasets/rscbjbr9sj/2)
 
