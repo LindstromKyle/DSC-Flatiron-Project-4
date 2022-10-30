@@ -1,5 +1,6 @@
 # Helping Humanitarian Aid Workers Identify Pediatric Pneumonia
 
+
 Classifying pneumonia from X-ray images taken at the Guangzhou Women and Children's Medical Center
 
 
@@ -9,27 +10,38 @@ Classifying pneumonia from X-ray images taken at the Guangzhou Women and Childre
 ## **Introduction**
 
 
-Pneumonia is the single deadliest disease for children across the planet. This is especially true in developing nations in Southeast Asia and Sub-Saharan Africa, where many countries are dealing with a shortage of available doctors. Our client, the American Red Cross, is interested in easing the burden on medical professionals in these environments by developing new tools to identify pneumonia and flag children who are most at risk. They have asked us to train a model that is able classify the presence of pneumonia in a dataset of pediatrc x-rays. These model predictions can then be verified by medical specialists and the children can be treated accordingly. 
+Pneumonia is the single deadliest disease for children across the planet. This is especially true in developing nations in Southeast Asia and Sub-Saharan Africa, where many countries are dealing with a shortage of available doctors. Our client, the American Red Cross, is interested in easing the burden on medical professionals in these environments by developing new tools to identify pneumonia and flag children who are most at risk. They have asked us to train a model that is able classify the presence of pneumonia in a dataset of pediatric x-rays. These model predictions can then be verified by medical specialists and the children can be treated accordingly. 
 
 
 ## **Exploratory Data Analysis**
 
-This dataset was published in 2018 and consists of around 6,000 chest x-rays taken of children ages 1 through 5. These were collected at the Guangzhou Women and Children's Medical Center and collected by researchers at UC San Diego. The lables for the images were verified separately by 3 medical experts. Examples from this dataset are shown below in *Figure 1*:
 
+This dataset was published in 2018 and consists of around 6,000 chest x-rays taken of children ages 1 through 5. These were taken at the Guangzhou Women and Children's Medical Center and collected, cleaned, and published by researchers at UC San Diego. The labels for the images were verified separately by 3 medical experts. Examples from this dataset are shown below in *Figure 1*:
 
 
 ![](./images/image2.png)
 
+
 > *Figure 1*
 
-OLD PROJECT BELOW
+
+## **Data Augmentation**
 
 
-Because of the large imbalance in our target class, it was necessary to implement balanced class weight parameters during our modeling steps. 
+Because of the limited size of this dataset, and the fact that machine learning models thrive on more data, we decided to use augmentation to increase the size of our training examples. Images we flipped horizontallly and rotated by a random angle of ± 20 degrees. These augmentations are shown in *Figure 2*:
+
+
+![](./images/image3.png)
+
+
+> *Figure 2*
+
 
 ## **Performance Metrics**
 
+
 In order to judge the performance of our model, we decided on two metrics:
+
 
 ### **Recall**
 
