@@ -1,27 +1,29 @@
 # Helping Humanitarian Aid Workers Identify Pediatric Pneumonia
 
-Classifying pneumonia from X-ray images taken at the Guangzhou women's and children's medical center
-
-## **Introduction**
+Classifying pneumonia from X-ray images taken at the Guangzhou Women and Children's Medical Center
 
 
 ![](./images/image1.jpeg)
 
 
-Our client, an automobile manufacturer, is interested in increasing the safety rating of their upcoming line of new vehicles. They are considering the installation of a device that can detect when a crash has occured and predict whether or not EMS should be called to the scene automatically. The benefits of such a device are two-fold: A decrease in emergency response time, and an increase in customer confidence in the safety of their vehicles. We have been asked to prove this device is plausible using machine learning. Our task is to build a model capable of these predictions using data from the city of Chicago electronic crash reporting system. 
+## **Introduction**
+
+
+Pneumonia is the single deadliest disease for children across the planet. This is especially true in developing nations in Southeast Asia and Sub-Saharan Africa, where many countries are dealing with a shortage of available doctors. Our client, the American Red Cross, is interested in easing the burden on medical professionals in these environments by developing new tools to identify pneumonia and flag children who are most at risk. They have asked us to train a model that is able classify the presence of pneumonia in a dataset of pediatrc x-rays. These model predictions can then be verified by medical specialists and the children can be treated accordingly. 
 
 
 ## **Exploratory Data Analysis**
 
-We limited our analysis to features of this dataset that could theoretically be known by the proposed sensor device. Primary examples include weather and road conditions, time of day, vehicle type, contact point, and seatbelt use. The final dataset consists of over 600,000 unique accidents from 2017 to present day. 
+This dataset was published in 2018 and consists of around 6,000 chest x-rays taken of children ages 1 through 5. These were collected at the Guangzhou Women and Children's Medical Center and collected by researchers at UC San Diego. The lables for the images were verified separately by 3 medical experts. Examples from this dataset are shown below in *Figure 1*:
 
 
-The original target variable was split into many subclasses of injury, ranging from no injury at all to fatal. We binned this column into a binary classificationg problem: Accidents where an incapacitating or fatal injury occured and accidents with no serious reported injury. This way, the model either predicts an ambulance is necessary or not, which aligns with the initial busness goal. The final distribution of our target is shown in *Figure 1*:
 
-
-![](./images//media/image2.png)
+![](./images/image2.png)
 
 > *Figure 1*
+
+OLD PROJECT BELOW
+
 
 Because of the large imbalance in our target class, it was necessary to implement balanced class weight parameters during our modeling steps. 
 
