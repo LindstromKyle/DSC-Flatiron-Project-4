@@ -28,7 +28,7 @@ This dataset was published in 2018 and consists of around 6,000 chest x-rays tak
 ## **Data Augmentation**
 
 
-Because of the limited size of this dataset, and the fact that machine learning models thrive on more data, we decided to use augmentation to increase the size of our training examples. Images we flipped horizontallly and rotated by a random angle of ± 20 degrees. These augmentations are shown in *Figure 2*:
+Because of the limited size of this dataset, and the fact that machine learning models thrive on more data, we decided to use augmentation to increase the number of training examples available to our model. Images we flipped horizontallly and rotated by a random angle of ± 20 degrees. These augmentations are shown in *Figure 2*:
 
 
 ![](./images/image3.png)
@@ -45,37 +45,22 @@ In order to judge the performance of our model, we decided on two metrics:
 
 ### **Recall**
 
-Our first performance metric is recall- a measure of our model's true positive rate. We would like our recall to be high, to maximize the probability that if someone is seriously injured in a crash, the model predicts this correctly and flags them for a potential EMS response.
+Our first performance metric is recall- a measure of our model's true positive rate. We would like our recall to be high, to maximize the probability that if someone truly has pneumonia, the model predicts this correctly and flags them for a medical follow-up.
 
-### **False Positive Rate**
+### **Accuracy**
 
-Our second performance metric is false positive rate (FPR)- a measure of how often our model misclassifies people as seriously injured when their injuries are non-incapacitating or there are no injuries at all. We want to minimize our FPR so that we avoid sending an ambulance to every minor fender bender in chicago.
+Our second performance metric is accuracy- a measure of how many of our model's predictions are correct in total. Simply predicting every child has pneumonia would result in a 100% recall score, which is obviously not helpful in this context. We want to maximize accuracy so that we avoid a large false positive rate that does not reduce the strain on medical staff who are already spread too thin. 
 
-
-
-
-## **Baseline Model**
-
-In order to emulate the status quo we implemented a dummy classifier which defaulted to always predicting the majority class- no injury. This model's confusion matrix is shown in *Figure 2:*
-
-![](./images//media/image3.png)  
-
-
-
-
-> *Figure 2*
-
-This model is clearly ineffective- both the recall and FPR are zero, akin to having no device in the car at all. However, it will serve as a useful measuring stick to judge the improvements of our final model. 
 
 ## **Model Selection**
 
-We fit our data to many different models in order to find the most effective solution. *Figure 3* below shows a table of the performance metrics of various models after tuning the relevant hyperparameters:
+We fit many different models to our data in order to find the most effective solution. *Figure 3* below shows a table of the performance metrics of various models. 
 
-![](./images//media/image4.png)
+![](./images/image4.png)
 
 > *Figure 3*
 
-All except the baseline model preformed exceptionally well, and due to the virtual tie between random forest and XGBoost, we used the average fit time benchmark to decide on XGBoost as our final choice. 
+All models performed exceedingly well in regards to recall, but where the convolutional neural network shines is in it's overall accuracy. This is important in reducing those false positives, and thus it is the model we chose to pursue for this problem. 
 
 ## **Final Model**
 
