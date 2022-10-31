@@ -60,23 +60,27 @@ We fit many different models to our data in order to find the most effective sol
 
 > *Figure 3*
 
-All models performed exceedingly well in regards to recall, but where the convolutional neural network shines is in its overall accuracy. This is important in reducing those false positives, and thus it is the model we chose to pursue for this problem. 
+All models performed exceedingly well in regards to recall, but where the convolutional neural network shines is in its overall accuracy. This is important in reducing those false positives, and thus it is the model we chose to pursue for this problem.
 
 ## **Final Model**
 
-Our final model architecture consisted of an Xception model pretrained on the ImageNet dataset, with custom pooling and output layers specific to our binary classification problem. *Figure 4* shows the confusion matrix for this model's performance on our test data set:
+Our final model architecture consisted of an Xception model pretrained on the ImageNet dataset, with custom pooling and output layers specific to our binary classification problem. *Figure 4* shows our chosen metrics' evolution by training epoch and *Figure 5* shows the confusion matrix for this model's performance on our test data set:
 
-![](./images//media/image5.png)
+![](./images/image5.png)
 
 > *Figure 4*
 
+![](./images/image6.png)
+
+> *Figure 5*
+
 ### **Final Recall Score**
 
-Out of XXXX children in the test set with pneumonia, our model was able to recognize XXXX of them, for a recall score of 99%. This means our model is able to flag almost every child who truly has pneumonia for a follow up with a medical professional. 
+Out of 390 children in the test set with pneumonia, our model was able to recognize 389 of them, for a recall score of over 99%. This left only a single false negative, meaning our model is able to flag almost every child who truly has pneumonia for a follow up with a medical professional. 
 
 ### **Final Accuracy**
 
-Out of XXXX children in the test set total, our model correctly classified XXXX. This is important for reducing our false positives and ensuring that valuable medical resources are budgeted correctly for those who need it. 
+Out of 594 children in the test set total, our model correctly classified 545. This high accuracy is important for reducing our false positives and ensuring that valuable medical resources are budgeted correctly for those in need. 
 
 
 ## **Conclusions & Recommendations**
