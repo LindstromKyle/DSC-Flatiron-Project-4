@@ -28,7 +28,7 @@ This dataset was published in 2018 and consists of around 6,000 chest x-rays tak
 ## **Data Augmentation**
 
 
-Because of the limited size of this dataset, and the fact that machine learning models thrive on more data, we decided to use augmentation to increase the number of training examples available to our model. Images we flipped horizontallly and rotated by a random angle of ± 20 degrees. These augmentations are shown in *Figure 2*:
+Because of the limited size of this dataset, and the fact that machine learning models thrive on more data, we decided to use augmentation to increase the number of training examples available to our model. Images we flipped horizontally and rotated by a random angle of ± 20 degrees. These augmentations are shown in *Figure 2*:
 
 
 ![](./images/image3.png)
@@ -60,7 +60,7 @@ We fit many different models to our data in order to find the most effective sol
 
 > *Figure 3*
 
-All models performed exceedingly well in regards to recall, but where the convolutional neural network shines is in its overall accuracy. This is important in reducing those false positives, and thus it is the model we chose to pursue for this problem.
+All models performed exceedingly well in regard to recall, but where the convolutional neural network shines is in its overall accuracy. This is important in reducing those false positives, and thus it is the model we chose to pursue for this problem.
 
 ## **Final Model**
 
@@ -85,7 +85,7 @@ Out of 594 children in the test set total, our model correctly classified 545. T
 
 ## **Conclusions & Recommendations**
 
-We find that our convolutional neural network provides the optimal predictive power for this business problem. We believbe this model will indeed help humanitarian aid workers use their valuable medical resources more efficiently. Doctors can be deployed where they are most needed, and the children in need of aid can be identified more quickly. We recommend this system not as a replacement for a medical professional's opinion, but as a supplement to these resources and a technique to help filter through what may currently be simply too much data. 
+We find that our convolutional neural network provides the optimal predictive power for this business problem. We believe this model will indeed help humanitarian aid workers use their valuable medical resources more efficiently. Doctors can be deployed where they are most needed, and the children in need of aid can be identified more quickly. We recommend this system not as a replacement for a medical professional's opinion, but as a supplement to these resources and a technique to help filter through what may currently be simply too much data. 
 
 [Full Jupyter Notebook](https://github.com/hall-nicholas/flatiron-ds-project-4/blob/main/code/Draft_final.ipynb)  
 
