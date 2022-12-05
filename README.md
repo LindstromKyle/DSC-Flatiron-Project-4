@@ -10,13 +10,13 @@ Classifying pneumonia from X-ray images taken at the Guangzhou Women and Childre
 ## **Introduction**
 
 
-Pneumonia is the single deadliest disease for children across the planet. This is especially true in developing nations in Southeast Asia and Sub-Saharan Africa, where many countries are dealing with a shortage of available doctors. Our client, the American Red Cross, is interested in easing the burden on medical professionals in these environments by developing new tools to identify pneumonia and flag children who are most at risk. They have asked us to train a model that is able classify the presence of pneumonia in a dataset of pediatric x-rays. These model predictions can then be verified by medical specialists and the children can be treated accordingly. 
+Pneumonia is the single deadliest disease for children across the planet. This is especially true in developing nations in Southeast Asia and Sub-Saharan Africa, where many countries are dealing with a shortage of available doctors. Our hypothetical client, the American Red Cross, is interested in easing the burden on medical professionals in these environments by developing new tools to identify pneumonia and flag children who are most at risk. They have asked us to train a model that is able to classify the presence of pneumonia in a dataset of pediatric x-rays. These model predictions can then be verified by medical specialists and the children can be treated accordingly. 
 
 
 ## **Exploratory Data Analysis**
 
 
-This dataset was published in 2018 and consists of around 6,000 chest x-rays taken of children ages 1 through 5. These were taken at the Guangzhou Women and Children's Medical Center and collected, cleaned, and published by researchers at UC San Diego. The labels for the images were verified separately by 3 medical experts. Examples from this dataset are shown below in *Figure 1*:
+This dataset was published in 2018 and consists of around 6,000 chest X-rays taken of children ages 1 through 5. These were taken at the Guangzhou Women and Children's Medical Center and collected, cleaned, and published by researchers at UC San Diego. The labels for the images were verified separately by 3 medical experts. Examples from this dataset are shown below in *Figure 1*:
 
 
 ![](./images/image2.png)
@@ -28,7 +28,7 @@ This dataset was published in 2018 and consists of around 6,000 chest x-rays tak
 ## **Data Augmentation**
 
 
-Because of the limited size of this dataset, and the fact that machine learning models thrive on more data, we decided to use augmentation to increase the number of training examples available to our model. Images we flipped horizontally and rotated by a random angle of ± 20 degrees. These augmentations are shown in *Figure 2*:
+Because of the limited size of this dataset, and the fact that machine learning models thrive when trained on a significant amount of data, we decided to use augmentation to increase the number of training examples available to our model. Images were flipped horizontally and rotated by a random angle of ± 20 degrees. These augmentations are shown in *Figure 2*:
 
 
 ![](./images/image3.png)
@@ -54,13 +54,13 @@ Our second performance metric is accuracy- a measure of how many of our model's 
 
 ## **Model Selection**
 
-We fit many different models to our data in order to find the most effective solution. *Figure 3* below shows a table of the performance metrics of various models. 
+In order to find the most effective solution, we experimented with many different machine learning algorithms. *Figure 3* below shows a table of the performance metrics of various models. 
 
 ![](./images/image4.png)
 
 > *Figure 3*
 
-All models performed exceedingly well in regard to recall, but where the convolutional neural network shines is in its overall accuracy. This is important in reducing those false positives, and thus it is the model we chose to pursue for this problem.
+All models performed exceedingly well in regard to recall, but where the convolutional neural network shines is in its overall accuracy. This is important in reducing the overall false positive rate, and thus it is the model we chose to pursue for this business problem.
 
 ## **Final Model**
 
@@ -80,12 +80,12 @@ Out of 390 children in the test set with pneumonia, our model was able to recogn
 
 ### **Final Accuracy**
 
-Out of 594 children in the test set total, our model correctly classified 545. This high accuracy is important for reducing our false positives and ensuring that valuable medical resources are budgeted correctly for those in need. 
+Out of 594 total children in the test set, our model correctly classified 545. This high accuracy is important for reducing our false positives and ensuring that valuable medical resources are budgeted correctly for those in need. 
 
 
 ## **Conclusions & Recommendations**
 
-We find that our convolutional neural network provides the optimal predictive power for this business problem. We believe this model will indeed help humanitarian aid workers use their valuable medical resources more efficiently. Doctors can be deployed where they are most needed, and the children in need of aid can be identified more quickly. We recommend this system not as a replacement for a medical professional's opinion, but as a supplement to these resources and a technique to help filter through what may currently be simply too much data. 
+We find that our convolutional neural network provides the optimal predictive power for this business problem. We believe this model will indeed help humanitarian aid workers use their valuable medical resources more efficiently. Doctors can be deployed where they are most needed, and the children in need of aid can be identified more quickly. We recommend this system not as a replacement for a medical professional's opinion, but as a supplement to these resources and a technique to help filter through what is currently too much data. 
 
 [Full Jupyter Notebook](https://github.com/hall-nicholas/flatiron-ds-project-4/blob/main/code/Draft_final.ipynb)  
 
