@@ -10,7 +10,7 @@ Classifying pneumonia from X-ray images taken at the Guangzhou Women and Childre
 ## **Introduction**
 
 
-Pneumonia is the single deadliest disease for children across the planet. This is especially true in developing nations in Southeast Asia and Sub-Saharan Africa, where many countries are dealing with a shortage of available doctors. Our hypothetical client, the American Red Cross, is interested in easing the burden on medical professionals in these environments by developing new tools to identify pneumonia and flag children who are most at risk. They have asked us to train a model that is able to classify the presence of pneumonia in a dataset of pediatric x-rays. These model predictions can then be verified by medical specialists and the children can be treated accordingly. 
+Pneumonia is the single deadliest disease for children across the planet. This is especially true in developing nations in Southeast Asia and Sub-Saharan Africa, where many countries are dealing with a shortage of available doctors. Our hypothetical client, the American Red Cross, is interested in easing the burden on medical professionals in these environments by developing new tools to identify pneumonia and flag children who are most at risk. They have asked us to train a model that is able to classify the presence of pneumonia in a dataset of pediatric X-rays. These model predictions can then be verified by medical specialists and the children can be treated accordingly. 
 
 
 ## **Exploratory Data Analysis**
